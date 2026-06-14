@@ -1,4 +1,5 @@
 flask
+hnswlib
 numpy
 scikit-learn
 sentence-transformers

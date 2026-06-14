@@ -1,104 +1,404 @@
 {
-  "intents": [
-    "book-flight",
-    "cancel-flight",
-    "reschedule-flight",
-    "book-hotel",
-    "cancel-hotel",
-    "find-restaurants",
-    "order-food",
-    "track-order",
-    "return-item",
-    "exchange-item",
-    "request-refund",
-    "check-balance",
-    "transfer-money",
-    "pay-bill",
-    "split-bill",
-    "set-budget",
-    "view-spending",
-    "update-profile",
-    "reset-password",
-    "change-email",
-    "verify-account",
-    "enable-2fa",
-    "disable-2fa",
-    "subscribe-newsletter",
-    "unsubscribe-newsletter",
-    "create-task",
-    "update-task",
-    "delete-task",
-    "schedule-meeting",
-    "cancel-meeting",
-    "join-video-call",
-    "share-screen",
-    "send-invitation",
-    "accept-invitation",
-    "decline-invitation",
-    "book-appointment",
-    "cancel-appointment",
-    "reschedule-appointment",
-    "find-doctor",
-    "refill-prescription",
-    "order-groceries",
-    "create-shopping-list",
-    "add-to-cart",
-    "remove-from-cart",
-    "checkout-order",
-    "apply-coupon",
-    "track-shipment",
-    "report-lost-card",
-    "freeze-card",
-    "unfreeze-card",
-    "dispute-charge",
-    "file-claim",
-    "check-warranty",
-    "extend-warranty",
-    "download-document",
-    "upload-document",
-    "convert-file",
-    "compress-file",
-    "translate-text",
-    "summarize-text",
-    "draft-email",
-    "send-email",
-    "schedule-post",
-    "create-campaign",
-    "view-analytics",
-    "export-report",
-    "import-data",
-    "sync-calendar",
-    "add-reminder",
-    "snooze-reminder",
-    "set-alarm",
-    "stop-alarm",
-    "play-music",
-    "pause-music",
-    "skip-track",
-    "find-podcast",
-    "start-podcast",
-    "stop-podcast",
-    "create-playlist",
-    "share-playlist",
-    "join-community",
-    "leave-community",
-    "post-message",
-    "delete-message",
-    "report-abuse",
-    "block-user",
-    "unblock-user",
-    "follow-user",
-    "unfollow-user",
-    "like-post",
-    "unlike-post",
-    "save-post",
-    "unsave-post",
-    "rate-service",
-    "review-product",
-    "book-rental-car",
-    "cancel-rental-car",
-    "find-parking",
-    "pay-toll",
-    "request-support"
+  "pairs": [
+    {
+      "original_intents": [],
+      "intent": "policy-coverage-inquiry",
+      "questions": [
+        "What does my health insurance policy cover for hospitalization?",
+        "Which hospitalization expenses are covered by my health plan?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "policy-exclusions-inquiry",
+      "questions": [
+        "What treatments are excluded from my policy?",
+        "What is not covered under my insurance plan?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "premium-amount-check",
+      "questions": [
+        "How much is my monthly premium?",
+        "What premium amount do I need to pay each month?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "premium-due-date",
+      "questions": [
+        "When is my next premium payment due?",
+        "What is the due date for my upcoming premium?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "premium-payment-history",
+      "questions": [
+        "Can you show my premium payment history?",
+        "Where can I view my previous premium payments?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "policy-renewal-status",
+      "questions": [
+        "Is my policy due for renewal this month?",
+        "Does my insurance policy need to be renewed soon?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "renew-policy",
+      "questions": [
+        "How can I renew my insurance policy?",
+        "What steps should I follow to renew my policy?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "download-policy-document",
+      "questions": [
+        "Where can I download my policy certificate?",
+        "How can I download my policy brochure or PDF?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "policy-cancellation",
+      "questions": [
+        "How do I cancel my insurance policy?",
+        "What is the process for terminating my insurance policy?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "free-look-cancellation",
+      "questions": [
+        "Can I cancel my policy within the free-look period?",
+        "Can I withdraw from the policy during the review period?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "beneficiary-update",
+      "questions": [
+        "How do I change the nominee on my policy?",
+        "Where can I update my policy beneficiary?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "address-change-request",
+      "questions": [
+        "How can I update my address in my insurance records?",
+        "I moved recently; how do I change my registered address?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "contact-information-update",
+      "questions": [
+        "I changed my phone number. How do I update it?",
+        "Where can I change my registered mobile number or email?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "policy-status-inquiry",
+      "questions": [
+        "Is my policy currently active?",
+        "How can I check whether my insurance is active?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "coverage-limit-inquiry",
+      "questions": [
+        "What is my sum insured amount?",
+        "What is the maximum coverage available under my policy?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "deductible-inquiry",
+      "questions": [
+        "What deductible applies to my claim?",
+        "How much must I pay before insurance covers my claim?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "co-payment-inquiry",
+      "questions": [
+        "Do I have any co-pay requirement under this policy?",
+        "What portion of the treatment bill must I pay myself?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "network-hospital-search",
+      "questions": [
+        "Which hospitals near me accept cashless treatment?",
+        "Find a nearby hospital in my insurer network."
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "cashless-claim-eligibility",
+      "questions": [
+        "Can I avail cashless hospitalization for this treatment?",
+        "Is this hospital treatment eligible for a cashless claim?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "pre-authorization-status",
+      "questions": [
+        "What is the status of my cashless claim approval?",
+        "Has my cashless pre-approval been accepted?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "claim-filing-process",
+      "questions": [
+        "How do I submit an insurance claim?",
+        "What are the steps to raise a new insurance claim?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "claim-status-tracking",
+      "questions": [
+        "What is the status of claim number 12345?",
+        "How can I track the progress of my submitted claim?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "claim-rejection-reason",
+      "questions": [
+        "Why was my claim rejected?",
+        "Why did the insurer deny my claim?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "claim-settlement-amount",
+      "questions": [
+        "How much was approved for my claim?",
+        "What claim settlement amount will I receive?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "reimbursement-claim-process",
+      "questions": [
+        "How can I file a reimbursement claim?",
+        "How do I claim back medical expenses I already paid?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "upload-claim-documents",
+      "questions": [
+        "Where do I upload my medical bills and reports?",
+        "How can I submit supporting documents for my claim?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "missing-claim-documents",
+      "questions": [
+        "What documents are still pending for my claim?",
+        "Which additional documents are required to process my claim?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "claim-escalation",
+      "questions": [
+        "How can I appeal a rejected claim?",
+        "Where can I challenge or escalate a denied claim?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "accident-claim-reporting",
+      "questions": [
+        "How do I report an accident for my vehicle insurance?",
+        "I had a car accident; how do I notify my insurer?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "vehicle-damage-coverage",
+      "questions": [
+        "Does my car insurance cover bumper damage?",
+        "Is damage to my vehicle included in my insurance coverage?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "roadside-assistance-request",
+      "questions": [
+        "Can I get roadside assistance right now?",
+        "My vehicle has broken down and I need emergency help."
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "vehicle-policy-renewal",
+      "questions": [
+        "My car insurance expires next week. How do I renew it?",
+        "How can I extend my motor insurance before it expires?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "no-claim-bonus-inquiry",
+      "questions": [
+        "What is my current No Claim Bonus percentage?",
+        "How much no-claim discount have I earned?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "add-vehicle-driver",
+      "questions": [
+        "Can I add another driver to my auto policy?",
+        "How do I include an additional driver on my car insurance?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "life-insurance-death-claim",
+      "questions": [
+        "How can I file a death claim for a life insurance policy?",
+        "What is the process for claiming life insurance after death?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "maturity-benefit-inquiry",
+      "questions": [
+        "When will I receive my policy maturity payout?",
+        "On what date will my maturity benefit be paid?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "surrender-value-inquiry",
+      "questions": [
+        "What is the surrender value of my policy?",
+        "How much will I receive if I surrender my policy now?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "loan-against-policy",
+      "questions": [
+        "Can I take a loan against my life insurance policy?",
+        "Am I eligible to borrow money using my policy as security?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "policy-lapse-status",
+      "questions": [
+        "Has my policy lapsed due to non-payment?",
+        "Is my insurance inactive because I missed a premium?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "policy-revival",
+      "questions": [
+        "How can I reinstate a lapsed policy?",
+        "What do I need to do to reactivate an expired policy?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "underwriting-status-inquiry",
+      "questions": [
+        "Is my application still under underwriting review?",
+        "How can I track the underwriting status of my application?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "medical-examination-requirement",
+      "questions": [
+        "Do I need a medical test before policy issuance?",
+        "Is a health checkup mandatory for this insurance application?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "new-policy-quote-request",
+      "questions": [
+        "Can you provide a quote for term insurance?",
+        "How much would a new term insurance plan cost me?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "compare-insurance-plans",
+      "questions": [
+        "Which health insurance plan is best for a family of four?",
+        "Help me compare health plans for my family."
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "add-dependent-coverage",
+      "questions": [
+        "How do I add my spouse to my health policy?",
+        "Can I include a family member as a dependent on my plan?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "international-coverage-inquiry",
+      "questions": [
+        "Am I covered while traveling abroad?",
+        "Does my insurance provide coverage outside the country?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "tax-benefit-inquiry",
+      "questions": [
+        "Can I claim tax deductions for my insurance premiums?",
+        "Are my policy premium payments eligible for a tax deduction?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "fraud-reporting",
+      "questions": [
+        "How do I report suspected insurance fraud?",
+        "Where can I report a potentially fraudulent insurance activity?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "customer-complaint-registration",
+      "questions": [
+        "I want to register a complaint regarding claim handling.",
+        "How do I lodge a grievance about my insurance claim?"
+      ]
+    },
+    {
+      "original_intents": [],
+      "intent": "agent-advisor-information",
+      "questions": [
+        "Who is the servicing agent for my policy?",
+        "How can I find the agent assigned to my insurance policy?"
+      ]
+    }
   ]
 }

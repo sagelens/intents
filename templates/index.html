@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f5f3">
+  <title>Intent Clustering</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <strong class="brand">Intent Clustering</strong>
+    <div class="header-metrics">
+      <span><b id="intentCount">0</b> intents</span>
+      <span><b id="clusterCount">0</b> clusters</span>
+      <span><b id="buildTime">-</b> build</span>
+    </div>
+  </header>
+
+  <main class="shell">
+    <nav class="workspace-tabs" aria-label="Workspace sections">
+      <button class="tab active" data-view="map">Viewer</button>
+      <button class="tab" data-view="catalog">Intents & clustering</button>
+      <button class="tab" data-view="query">Vector search</button>
+    </nav>
+
+    <section class="view active" id="mapView">
+      <div class="map-toolbar panel">
+        <h2>Cluster viewer</h2>
+        <div class="map-controls">
+          <label class="search-control">
+            <span>⌕</span>
+            <input id="mapSearch" type="search" placeholder="Find intent">
+          </label>
+          <select id="clusterFilter" aria-label="Filter cluster">
+            <option value="all">All clusters</option>
+          </select>
+          <button class="button secondary" id="resetMap">Reset</button>
+        </div>
+      </div>
+      <div class="map-layout">
+        <article class="panel map-stage">
+          <div class="map-key">
+            <span><i class="center-dot"></i> center</span>
+            <span><i class="intent-dot"></i> intent</span>
+          </div>
+          <svg id="clusterMap" viewBox="0 0 1200 720" role="img" aria-label="Interactive t-SNE intent cluster map"></svg>
+          <div class="map-tooltip hidden" id="mapTooltip"></div>
+          <div class="zoom-controls">
+            <button id="zoomIn" aria-label="Zoom in">+</button>
+            <button id="zoomOut" aria-label="Zoom out">−</button>
+          </div>
+        </article>
+        <aside class="panel cluster-list-panel">
+          <div class="panel-heading compact"><h2>Clusters</h2></div>
+          <div class="cluster-list" id="clusterList"></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="view" id="catalogView">
+      <div class="split-layout">
+        <article class="panel intent-editor">
+          <div class="panel-heading">
+            <h2>Intent list</h2>
+            <span class="count-badge" id="editorCount">0 items</span>
+          </div>
+          <p class="panel-copy">One kebab-case intent per line.</p>
+          <textarea id="intentInput" spellcheck="false" aria-label="Intent catalog"></textarea>
+          <div class="editor-actions">
+            <button class="button secondary" id="formatIntents">Clean list</button>
+            <button class="button ghost" id="clearIntents">Clear</button>
+          </div>
+        </article>
+
+        <aside class="panel control-panel">
+          <div class="panel-heading"><h2>Clustering</h2></div>
+          <label class="field">
+            <span>Cosine distance threshold</span>
+            <div class="range-row">
+              <input id="threshold" type="range" min="0.30" max="1.10" value="0.80" step="0.01">
+              <output id="thresholdValue">0.80</output>
+            </div>
+            <small>Lower values create tighter clusters. Cluster size is not constrained.</small>
+          </label>
+          <button class="button primary full" id="buildButton">Build clusters</button>
+          <div class="progress-wrap hidden" id="buildProgress">
+            <div class="progress-track"><span></span></div>
+            <p>Embedding and clustering...</p>
+          </div>
+          <div class="message" id="catalogMessage"></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="view" id="queryView">
+      <article class="query-console panel">
+        <div class="query-header">
+          <h2>Vector search</h2>
+          <div class="query-settings">
+            <label>Results
+              <input id="vectorLimit" type="number" min="1" max="50" value="20">
+            </label>
+          </div>
+        </div>
+        <div class="query-bar">
+          <input id="queryInput" type="text" placeholder="Enter user query">
+          <button class="button primary" id="runQuery">Run</button>
+        </div>
+        <div class="message" id="queryMessage"></div>
+      </article>
+
+      <div class="results-grid">
+        <article class="panel result-panel">
+          <div class="result-heading">
+            <h2>Cosine similarity ranking</h2>
+            <span class="latency" id="vectorLatency">Not run</span>
+          </div>
+          <section class="result-section">
+            <div class="table-head"><h3>Ranked intents</h3><span>max 50</span></div>
+            <div class="empty-state" id="vectorStage">No results.</div>
+          </section>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast hidden" id="toast"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
